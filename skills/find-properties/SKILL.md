@@ -16,14 +16,15 @@ La Cheie (lacheie.ro) is a Romanian real-estate marketplace. The `lacheie` conne
    - Pass place names as the user said them (`city: "Cluj-Napoca"`, `county: "Cluj"`); diacritics are optional. If the tool reports several localities with that name, ask the user which county or pick the suggested one.
    - Prices are in each listing's own currency, mostly EUR; rents are per month.
    - For "near" a place (a station, a university, a mall, a street), pass that place's coordinates as `near_latitude` and `near_longitude`, with `radius_km` (about 1 is a walk). Each listing then comes with its `distance_km`.
-3. One or two searches usually answer a question. Narrow with filters and `limit` instead of reading page after page.
+3. One search usually answers a question. Narrow with filters and `limit` instead of reading page after page. In an app that draws cards, each search shows its first results to the user as a row of cards: pass `display: false` for a search you only need for yourself (counting, comparing areas), and a short `heading` in the user's language for the one you show.
 4. If nothing matches, say so and widen one filter at a time (neighbourhood, then price, then the whole county), telling the user what you changed.
 
 ## Present the results
 
-- The user does not see search results. Call `show_offers` once per answer with the id of every listing your answer will point to (at most 12) and a short `heading` in the user's language. The user then sees cards with photos, prices and a map, and under them a link to the site's page for that kind of property and place.
-- Choose before you show. If you will mention the closest listings and the cheapest ones, both groups go into the same call. Do not link in your text to a listing that is not among the cards: the user looks for it there.
-- Once the cards are shown, do not repeat them as a list: say in a sentence or two why these fit and how the search could be narrowed. If the app shows no cards (a terminal), list each one with its price, place, size and `url` instead.
+- In an app that draws cards, the search you show is already on screen as cards with photos, prices and a map; do not call `show_offers` for it. Use `show_offers` when the listings to show come from several searches, and in an app without cards (a terminal): before you answer, once, without asking the user first, with the id of every listing your answer will point to (at most 12).
+- Choose before you show. Do not link in your text to a listing that is not among the cards: the user looks for it there.
+- After the cards, give a table of the same listings, one row per card in the same order: price, size, area, distance when you searched around a point, and the link from `listings` in the result. Then say in a sentence or two why these fit and how the search could be narrowed. If the app shows no cards (a terminal), the table is the answer.
+- In an app that draws cards, search results carry no links to listings they do not show.
 - `site_page` is the site's page for that kind of property and place. It lists everything of that kind there and does not apply the price, rooms or distance of your search, so present it as that page and not as "all results".
 - Reply in the user's language.
 - Photos and the advertiser's contact options are on each listing's page; the tools never return phone numbers, so never write one.
