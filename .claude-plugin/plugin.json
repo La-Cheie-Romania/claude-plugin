@@ -1,0 +1,15 @@
+{
+  "name": "lacheie",
+  "displayName": "La Cheie",
+  "version": "1.0.0",
+  "description": "Search property listings for sale or rent across Romania on La Cheie (lacheie.ro), see what buyers and tenants are asking for, and publish your own property request from a conversation.",
+  "author": {
+    "name": "La Cheie",
+    "url": "https://lacheie.ro"
+  },
+  "homepage": "https://lacheie.ro",
+  "repository": "https://github.com/La-Cheie-Romania/claude-plugin",
+  "privacyPolicyUrl": "https://lacheie.ro/politica-confidentialitate",
+  "license": "LicenseRef-LaCheie-Plugin",
+  "keywords": ["real estate", "romania", "imobiliare", "apartments", "rentals"]
+}

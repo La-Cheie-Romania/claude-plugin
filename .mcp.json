@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "lacheie": {
+      "type": "http",
+      "url": "https://api.lacheie.ro/mcp"
+    }
+  }
+}
