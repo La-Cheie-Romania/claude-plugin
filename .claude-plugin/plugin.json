@@ -10,6 +10,9 @@
   "homepage": "https://lacheie.ro",
   "repository": "https://github.com/La-Cheie-Romania/claude-plugin",
   "privacyPolicyUrl": "https://lacheie.ro/politica-confidentialitate",
+  "documentationUrl": "https://lacheie.ro/asistenti-ai",
+  "supportUrl": "https://lacheie.ro/asistenti-ai#probleme",
+  "termsOfServiceUrl": "https://lacheie.ro/termeni-si-conditii",
   "license": "LicenseRef-LaCheie-Plugin",
   "keywords": ["real estate", "romania", "imobiliare", "apartments", "rentals"]
 }
