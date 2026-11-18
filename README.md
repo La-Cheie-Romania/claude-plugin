@@ -28,4 +28,6 @@ Privacy policy: https://lacheie.ro/politica-confidentialitate
 
 ## Support
 
-b2b@lacheie.ro
+secretariat.lacheie@gmail.com
+
+Guide to using La Cheie with Claude: https://lacheie.ro/asistenti-ai
